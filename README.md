@@ -13,3 +13,8 @@
 * Build typescript - `npm run build`
 * Run project - `npm start`
 * Go to swagger page - `localhost:3000/documentation`
+
+### Criar imagem docker
+* docker build -t api-herois .
+* docker run -p 3000:3000 --link mongodb:mongodb -e MONGO_URL=mongodb api-herois
+* docker run -d --name mongodb mongo:3.5
